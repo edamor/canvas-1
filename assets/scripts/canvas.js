@@ -8,55 +8,6 @@ canvas.height = canvas.scrollHeight;
 
 let c = canvas.getContext("2d");
 
-// for(let a=0;a<20;a++){
-// 	let x=Math.random()*canvas.width;
-// 	let y=Math.random()*canvas.height;
-// 	c.fillStyle = "rgba(0,255,0, 0.2)";
-// 	c.fillRect(x,y, 100,100);
-// }
-
-// c.fillStyle = "rgba(0,0,255, 0.2)";
-// c.fillRect(400,200, 100,100);
-
-
-// //line
-// c.beginPath();
-// c.moveTo(50,200);
-// c.lineTo(400,50);
-// c.lineTo(420,300);
-// c.strokeStyle = "red";
-// c.stroke();
-
-
-// //arc or circle
-// c.beginPath();
-// c.arc(300,300,30, 0, Math.PI*2, false);
-// c.strokeStyle= "orangered";
-// c.stroke();
-
-
-
-// for(let i=0;i<20;i++){
-// 	let x=Math.random()*canvas.width;
-// 	let y=Math.random()*canvas.height;
-	
-
-// 	let q=255-(Math.random()*(255-100));
-// 	let w=255-(Math.random()*(70-10));
-// 	let e=255-(Math.random()*(200-100));
-
-// 	c.strokeStyle=`rgb(${q},${w},${e})`;
-// 	c.stroke();
-// 	c.beginPath();
-// 	c.arc(x,y,30, 0, Math.PI*2, false);
-	
-// 	// c.strokeStyle= `rgb(${Math.floor(255 - 42.5 * i)},${Math.floor(255 - 42.5 * i)},0)`;
-
-	
-// 	console.log(c.strokeStyle);
-// 	console.log(q);
-// }
-
 let mouse = {
 	x:undefined,
 	y:undefined
@@ -69,9 +20,7 @@ window.addEventListener("mousemove",
 })
 
 
-
-
-function Bilog(x,y,dx,dy,radius,q,w,e){
+function Circle(x,y,dx,dy,radius,q,w,e){
 	this.x = x;
 	this.y = y;
 	this.dx = dx;
@@ -129,7 +78,7 @@ for(let i = 0; i < 200; i++){
 	let w = Math.floor(255 - (Math.random() * 180));
 	let e = Math.floor(110 - (Math.random() * 55));
 
-	circleArray.push(new Bilog(x,y,dx,dy,radius,q,w,e));	
+	circleArray.push(new Circle(x,y,dx,dy,radius,q,w,e));	
 }
 
 console.log(circleArray);
