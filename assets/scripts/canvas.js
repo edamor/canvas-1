@@ -81,7 +81,6 @@ for(let i = 0; i < 200; i++){
 	circleArray.push(new Circle(x,y,dx,dy,radius,q,w,e));	
 }
 
-console.log(circleArray);
 	
 
 
@@ -99,5 +98,3 @@ function animate(){
 animate();
 
 
-
-console.log(canvas);
